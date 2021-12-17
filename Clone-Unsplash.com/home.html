@@ -1,22 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAJFBMVEUAAAD////KysqPj49wcHDExMRpaWna2tqKiore3t6amprOzs6tB8UlAAABL0lEQVR4nO3cSQ7CQAxFwRACYbj/fVmzs2RHxqTeAVq/9lYvl5K2pb6tZtpS8wwhIWEiwmCEhISJCIMREhImIgxGSEiYiDAYISFhIsJghISEiQiDERISJiIMRkhImIgwGCEhYSLCYISEhIkIgxESEiYiDEZISJiIMNj/C+8HCO8104qE+1rfXjOtSPjDEc6PcH6E8yOcH+H8COdHOD/C+RHOj3B+hPMjnB/h/AjnRzg/wvmdQHit6PE8YNrzUbKt6KrgdoDwVrStJkJCwv4ICQn7IyQk7I+QkLA/QkLC/ggJCfsjJCTsj5CQsD9CQsL+CAkJ+yMkJOyPkJCwP0JCwv4ICQn7IyQk7G89QLh2o756vcu/oH2/ulGSJEmSJEmSJEmSJEmSJEmSJEmSJJ21D5yDXPIW9uVEAAAAAElFTkSuQmCC">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/navbar.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
-<body>
+<style>
+    #display {
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 32%);
+        gap: 7px;
+    }
+
+    #display > div {
+        max-height: 250px;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    #display img {
+        width: 95%;
+    }
+
+    section-search-form::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    #section-search-form {
+        display: flex;
+    }
+
+    #btn_search {
+        width: 60px;
+        height: 45px;
+        background-color: #fff;
+        border: 5px solid #fff;
+    }
+
+    #query {
+        width: 760px;
+        height: 39.5px;
+        color: rgb(14, 12, 12);
+    }
+</style>
+
+<body onload="mypage()">
     <div id="navbar_container"></div>
+
+    <div id="main-section">
+        <div class="section">
+            <div class="section-content">
+
+                <div>
+                    <h1>Unsplash</h1>
+                    <p>The internet’s source of <a href="#">freely-usable images.</a> <br>Powered by creators
+                        everywhere.</p>
+                </div>
+                <div id="section-search-form">
+                   
+                    <div>
+                        <button id="btn_search" onclick="myFunction()"><i class="fa fa-search"></i></button></input> 
+                    </div>
+
+                    <div>
+                        <input id="query" type="text" placeholder="Search free high- resolution photo" id="check">
+                    </div>
+                        
+                </div>
+            </div>
+
+
+            <div class="section-overlay">
+
+                <div>
+                    <span> Photo of the Day </span>
+                    <span style="opacity: 0.5;"> by </span>
+                    <span> Fakurian Design </span>
+
+                </div>
+
+                <div>
+                    <span style="opacity: 0.5;"> Read more about the </span>
+                    <span> Unsplash License </span>
+
+                </div>
+
+                <div>
+                    <div style="margin-left: 170px; font-size: 16px; margin-bottom: 6px;">
+                        Squarespace
+                    </div>
+
+                    <div>
+                        Start your website with Squarespace today.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="display"></div>
+
+
+
+
 </body>
+
 </html>
 <script type="module">
     import navbar from "./components/navbar.js";
-    console.log(navbar)
+    // console.log(navbar)
+    import nav from "./scripts/getdata.js";
+
 
     let navbar_container = document.getElementById("navbar_container");
 
-    navbar_container.innerHTML =  navbar();
+    navbar_container.innerHTML = navbar();
+
+
+    let parents = document.getElementById("navbar_components");
+
+    var c1 = parents.childNodes[1];
+    c1.onclick = function () {
+        var pass = c1.innerText;
+        nav(pass);
+    }
+    var c2 = parents.childNodes[3];
+    c2.onclick = function () {
+        var pass = c2.innerText;
+        nav(pass);
+    }
+    var c3 = parents.childNodes[7];
+    c3.onclick = function () {
+        var pass = c3.innerText;
+        nav(pass);
+    }
+    var c4 = parents.childNodes[9];
+    c4.onclick = function () {
+        var pass = c4.innerText;
+        nav(pass);
+    }
+    var c5 = parents.childNodes[11];
+    c5.onclick = function () {
+        var pass = c5.innerText;
+        nav(pass);
+    }
+    var c6 = parents.childNodes[13];
+    c6.onclick = function () {
+        var pass = c6.innerText;
+        nav(pass);
+    }
+    var c7 = parents.childNodes[15];
+    c7.onclick = function () {
+        var pass = c7.innerText;
+        nav(pass);
+    }
+    var c8 = parents.childNodes[17];
+    c8.onclick = function () {
+        var pass = c8.innerText;
+        nav(pass);
+    }
+    var c9 = parents.childNodes[19];
+    c9.onclick = function () {
+        var pass = c9.innerText;
+        nav(pass);
+    }
+    var c10 = parents.childNodes[21];
+    c10.onclick = function () {
+        var pass = c10.innerText;
+        nav(pass);
+    }
+
+    // nature.addEventListener("click",hello)
+</script>
+
+<script>
+
+
+
+
+    var api = "THQmZAArw8DpyGkVnb8bK1CY7zkAbHDwx8yOO0vILFw"
+
+    var display = document.getElementById("display")
+
+
+    async function myFunction() {
+        let input = document.getElementById("query").value;
+
+
+        // console.log('input:', input)
+
+        let response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${input}&client_id=${api}`);
+
+        let data = await response.json();
+        var out = [];
+        // console.log('data:', data)
+        // console.log('data:', data.results.urls)
+        // console.log('data:', data.results[2].urls.regular)
+
+        for (var i = 0; i < data.results.length; i++) {
+            out.push(data.results[i].urls)
+        }
+        //    console.log(out)
+        localStorage.setItem("name", JSON.stringify(input))
+        localStorage.setItem("images_data", JSON.stringify(out))
+
+        window.location.href = "page.html"
+
+
+
+
+    }
+
+    function mypage() {
+        async function nav() {
+
+            var api = "THQmZAArw8DpyGkVnb8bK1CY7zkAbHDwx8yOO0vILFw"
+            var x = "motivation"
+
+
+
+            let response = await fetch(`https://api.unsplash.com/search/photos?page=1&query=${x}&client_id=${api}`);
+            let data = await response.json();
+            var output = [];
+            for (var i = 0; i < data.results.length; i++) {
+                output.push(data.results[i].urls)
+            }
+            // img.src= output.regular
+
+            // div.appendChild(img);
+            // display.appendChild(div)
+            // console.log(output); 
+
+            output.forEach(function (app) {
+                let div = document.createElement("div");
+                let img = document.createElement("img")
+
+                img.src = app.regular;
+                div.append(img);
+                display.appendChild(div)
+            })
+        }
+        nav();
+    }
 
 </script>

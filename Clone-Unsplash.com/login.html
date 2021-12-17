@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAJFBMVEUAAAD////KysqPj49wcHDExMRpaWna2tqKiore3t6amprOzs6tB8UlAAABL0lEQVR4nO3cSQ7CQAxFwRACYbj/fVmzs2RHxqTeAVq/9lYvl5K2pb6tZtpS8wwhIWEiwmCEhISJCIMREhImIgxGSEiYiDAYISFhIsJghISEiQiDERISJiIMRkhImIgwGCEhYSLCYISEhIkIgxESEiYiDEZISJiIMNj/C+8HCO8104qE+1rfXjOtSPjDEc6PcH6E8yOcH+H8COdHOD/C+RHOj3B+hPMjnB/h/AjnRzg/wvmdQHit6PE8YNrzUbKt6KrgdoDwVrStJkJCwv4ICQn7IyQk7I+QkLA/QkLC/ggJCfsjJCTsj5CQsD9CQsL+CAkJ+yMkJOyPkJCwP0JCwv4ICQn7IyQk7G89QLh2o756vcu/oH2/ulGSJEmSJEmSJEmSJEmSJEmSJEmSJJ21D5yDXPIW9uVEAAAAAElFTkSuQmCC">
+    <title>Login</title>
+</head>
+<style>
+    a {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        color: rgb(146, 141, 141);
+        text-decoration: none;
+    }
+
+    #main {
+        width: 50%;
+        margin: auto;
+
+    }
+
+    #pic {
+        width: 30%;
+        margin: auto;
+        margin-top: 100px;
+        margin-left: 330px;
+    }
+
+    #pic h1 {
+        font-size: 35px;
+    }
+
+    #pic img {
+        width: 60px;
+    }
+
+    #pic_div {
+        margin-left: 10px;
+    }
+
+    #fb {
+        background-color: royalblue;
+        width: 80%;
+        height: 45px;
+        margin: auto;
+        text-align: center;
+        border-radius: 5px;
+        color: white;
+        font-weight: 600;
+    }
+
+    #fb img {
+        width: 4%;
+    }
+
+    #or {
+        width: 3%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #main-form {
+        width: 80%;
+
+        margin: auto;
+    }
+
+    .allInput input {
+        width: 98%;
+        height: 25px;
+    }
+
+    #forgot {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+    }
+
+    #login_btn {
+        width: 99%;
+        margin: auto;
+        padding: 9px;
+        margin-top: 25px;
+        background-color: black;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    #foot {
+        text-align: center;
+        font-size: 17px;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+        <div id="pic">
+            <div id="pic_div">
+                <img
+                    src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg"
+                    alt=""></div>
+            <h1>Login</h1>
+            <h4>Welcome Back</h4>
+        </div>
+
+        <div id="fb">
+            <div id="fbb"> <span><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                        alt=""></span>
+                &nbsp;&nbsp; Login with Facebook</div>
+        </div>
+        <div id="or">OR</div>
+
+        <div id="main-form">
+            <div id="form">
+
+
+                <div class="allInput">
+                    <p>Email address</p>
+                    <input type="email" id="email">
+                </div>
+
+                <div>
+                    <div id="forgot">
+                        <div>Password</div>
+                        <div><a href="#">Forgot your Password?</a></div>
+                    </div>
+                    <div class="allInput"><input type="text" id="pswrd"></div>
+                </div>
+
+
+                <div id="join">
+                    <button id="login_btn" onclick="login()">Login</button>
+                </div>
+
+                <div id="foot">
+                    <p>Don't have an account?<a href="signup.html">Join</a></p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let login_data = JSON.parse(localStorage.getItem("signup"));
+    console.log('login_data:', login_data[0])
+
+
+    function login() {
+
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("pswrd").value;
+        let localMail = login_data[0].email;
+        let localPass = login_data[0].password
+        if (email == localMail && password == localPass) {
+            alert("Login Successfully")
+            window.location.href = "home.html"
+        }
+        else {
+            alert("Invalid Credentials")
+        }
+    }
+</script>

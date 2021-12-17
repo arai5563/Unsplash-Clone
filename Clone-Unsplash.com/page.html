@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAJFBMVEUAAAD////KysqPj49wcHDExMRpaWna2tqKiore3t6amprOzs6tB8UlAAABL0lEQVR4nO3cSQ7CQAxFwRACYbj/fVmzs2RHxqTeAVq/9lYvl5K2pb6tZtpS8wwhIWEiwmCEhISJCIMREhImIgxGSEiYiDAYISFhIsJghISEiQiDERISJiIMRkhImIgwGCEhYSLCYISEhIkIgxESEiYiDEZISJiIMNj/C+8HCO8104qE+1rfXjOtSPjDEc6PcH6E8yOcH+H8COdHOD/C+RHOj3B+hPMjnB/h/AjnRzg/wvmdQHit6PE8YNrzUbKt6KrgdoDwVrStJkJCwv4ICQn7IyQk7I+QkLA/QkLC/ggJCfsjJCTsj5CQsD9CQsL+CAkJ+yMkJOyPkJCwP0JCwv4ICQn7IyQk7G89QLh2o756vcu/oH2/ulGSJEmSJEmSJEmSJEmSJEmSJEmSJJ21D5yDXPIW9uVEAAAAAElFTkSuQmCC">
+    <title>Page</title>
+    <style>
+        #display {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 23%);
+            gap: 5px;
+        }
+
+        #display > div {
+        max-height: 200px;
+        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: auto;
+        }
+
+        #display img {
+            width: 95%;
+        }
+
+        #display_name {
+            font-size: 32px;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<script>
+
+</script>
+
+<body>
+    <div id="navbar_container"></div>
+    <div id="display_name"></div>
+    <div id="display"></div>
+</body>
+
+</html>
+
+<script type="module">
+    import navbar from "./components/navbar.js";
+    import nav from "./scripts/getdata.js"
+    // console.log(navbar)
+
+    let navbar_container = document.getElementById("navbar_container");
+
+    navbar_container.innerHTML = navbar();
+
+
+    let parents = document.getElementById("navbar_components");
+
+    var c1 = parents.childNodes[1];
+    c1.onclick = function () {
+        var pass = c1.innerText;
+        nav(pass);
+    }
+    var c2 = parents.childNodes[3];
+    c2.onclick = function () {
+        var pass = c2.innerText;
+        nav(pass);
+    }
+    var c3 = parents.childNodes[7];
+    c3.onclick = function () {
+        var pass = c3.innerText;
+        nav(pass);
+    }
+    var c4 = parents.childNodes[9];
+    c4.onclick = function () {
+        var pass = c4.innerText;
+        nav(pass);
+    }
+    var c5 = parents.childNodes[11];
+    c5.onclick = function () {
+        var pass = c5.innerText;
+        nav(pass);
+    }
+    var c6 = parents.childNodes[13];
+    c6.onclick = function () {
+        var pass = c6.innerText;
+        nav(pass);
+    }
+
+</script>
+<script>
+    let name = JSON.parse(localStorage.getItem("name"))
+    let display_name = document.getElementById("display_name")
+    let dis_name = document.createElement("h2")
+    dis_name.innerText = name;
+    display_name.appendChild(dis_name)
+
+    let images_data = JSON.parse(localStorage.getItem("images_data"))
+    function displayimage(images_data) {
+
+        images_data.forEach(function (images) {
+            console.log('images:', images)
+
+
+            var display = document.getElementById("display")
+
+            let div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = images.regular;
+
+            div.append(img);
+            // console.log('img:', img)
+            display.append(div)
+        })
+
+    }
+
+    displayimage(images_data)
+</script>

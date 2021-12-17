@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAJFBMVEUAAAD////KysqPj49wcHDExMRpaWna2tqKiore3t6amprOzs6tB8UlAAABL0lEQVR4nO3cSQ7CQAxFwRACYbj/fVmzs2RHxqTeAVq/9lYvl5K2pb6tZtpS8wwhIWEiwmCEhISJCIMREhImIgxGSEiYiDAYISFhIsJghISEiQiDERISJiIMRkhImIgwGCEhYSLCYISEhIkIgxESEiYiDEZISJiIMNj/C+8HCO8104qE+1rfXjOtSPjDEc6PcH6E8yOcH+H8COdHOD/C+RHOj3B+hPMjnB/h/AjnRzg/wvmdQHit6PE8YNrzUbKt6KrgdoDwVrStJkJCwv4ICQn7IyQk7I+QkLA/QkLC/ggJCfsjJCTsj5CQsD9CQsL+CAkJ+yMkJOyPkJCwP0JCwv4ICQn7IyQk7G89QLh2o756vcu/oH2/ulGSJEmSJEmSJEmSJEmSJEmSJEmSJJ21D5yDXPIW9uVEAAAAAElFTkSuQmCC">
+    <title>SignUp</title>
+</head>
+<style>
+    #container {
+        display: flex;
+    }
+
+    #container>div:nth-child(1) {
+       
+        position: fixed;
+        z-index: 1;
+
+        top: 0;
+
+        left: 0;
+        background-color: rgb(167, 159, 159);
+
+        overflow-x: scroll;
+
+        padding-top: 20px;
+        width: 45%;
+        height: 730px;
+        color: white;
+
+        font-size: 22px;
+        background-image: url(https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fGRldmVsb3BlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    }
+
+
+
+    #right {
+       
+        width: 50%;
+        height: 750px;
+        margin-left: 46%;
+
+
+    }
+
+    #logo {
+        width: 10%;
+        margin: auto;
+        margin-top: 70px;
+        margin-left: 90px;
+    }
+
+    #logo img {
+        width: 60%;
+    }
+
+    #text {
+        width: 70%;
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    #botm-text {
+        width: 70%;
+        margin: auto;
+        margin-top: 300px;
+        cursor: all-scroll;
+    }
+
+    #fb {
+        background-color: royalblue;
+        width: 80%;
+        height: 45px;
+        margin: auto;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    #fb img {
+        width: 4%;
+    }
+
+    #acunt {
+        width: 60%;
+        margin: auto;
+        margin-top: 100px;
+        margin-left: 240px;
+
+    }
+
+    #acunt h1 {
+        font-size: 50px;
+    }
+
+    #or {
+        width: 8%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    #form1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+
+    #form1 input {
+        width: 95%;
+        height: 25px;
+    }
+
+    .allInput input {
+        width: 98%;
+        height: 25px;
+    }
+
+    #main-form {
+        width: 80%;
+        
+        margin: auto;
+    }
+
+    #join_btn {
+        width: 99%;
+        margin: auto;
+        padding: 9px;
+        margin-top: 25px;
+        background-color: black;
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAP1BMVEX///8AAADGxsZ4eHhwcHC4uLi+vr5tbW1zc3PCwsKhoaFoaGjT09O7u7tlZWXn5+fNzc02NjZ+fn5dXV3t7e1juHGPAAABJ0lEQVR4nO3dSRKCQBBFQQcUVJy9/1ldeIGmO+wqw8wL/HprIFitAAAAAAAAAL5mHra1pmP08UXO63qn6OOL7BsKx+jjiyhUmJ9ChfkpVJifQoX5KVSYn0KF+SlUmJ9ChfkpVJifQoX5KVSYn0KF+SlUmJ/C3y9seevrEn18keuu3i36eAAAAACAPzafhmXGlu+x+659bLo+ezgsXpsCCls2lxduFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqFChQoUKFSpUqPCrhS2bfddqN++P6r+wPJ4/UdiXQoUK4ylUqDCeQoUK4ylUqDCeQoUK4ylUqDCeQoUK4ylUqDCeQoUK4ylUqDCeQoU1bwv2NTQXvg6b1ObmQgAAAAAAAOBvvAFpaUPkHNaBMAAAAABJRU5ErkJggg=="
+                    alt="">
+            </div>
+            <div id="text">
+                <div>
+                    <h1>Creation starts here</h1>
+                </div>
+                <div>
+                    <h3>Access 3,441,189 free, high-resolution</h3>
+                </div>
+                <div>
+                    <h3>photos you can’t find anywhere else</h3>
+                </div>
+            </div>
+            <div id="botm-text">
+                <p>Uploaded over 8 years ago by Barcelona
+
+                </p>
+            </div>
+        </div>
+
+
+        <div id="right">
+            <div id="acunt">
+                <h1>Join Unsplash</h1>
+                <p style="font-size: 17px"> &nbsp; &nbsp; &nbsp; &nbsp; Already have an account? <a
+                        style=" font-size: 17px; color: rgb(167, 159, 159);" href="login.html">Login</a></p>
+            </div>
+
+            <div id="fb">
+                <div id="fbb"> <span><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png"
+                            alt=""></span>
+                    &nbsp;&nbsp; Join Using Facebook</div>
+            </div>
+            <div id="or">OR</div>
+
+            <div id="main-form">
+                <div id="form">
+
+                    <div id="form1">
+                        <div>
+                            <p>First Name</p>
+                            <input type="text" id="firstName">
+                        </div>
+                        <div>
+                            <p> Last Name</p>
+                            <input type="text" id="lastName">
+                        </div>
+                    </div>
+
+                    <div class="allInput">
+                        <p>Email address</p>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div class="allInput">
+                        <p>Username (only letters, numbers, and underscores)</p>
+                        <input type="text" id="userName">
+                    </div>
+
+                    <div class="allInput">
+                        <p>Password (min. 6 char)</p>
+                        <input type="text" id="pswrd">
+                    </div>
+
+                    <div id="join">
+                        <button id="join_btn" onclick="submit()">Join</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let signup_arr = [];
+    function submit() {
+        let signup = JSON.parse(localStorage.getItem("signup"));
+
+        if (signup === null) {
+            signup = [];
+        }
+
+
+        var data = {
+            first_name: document.getElementById("firstName").value,
+            last_name: document.getElementById("lastName").value,
+            email: document.getElementById("email").value,
+            userName: document.getElementById("userName").value,
+            password: document.getElementById("pswrd").value,
+        }
+
+        if (data.first_name == "" || data.last_name == "" || data.email == "" || data.userName == "" || data.password == "") {
+            alert("Please fill all the Details")
+        }
+        else {
+            signup_arr.push(data);
+            localStorage.setItem("signup", JSON.stringify(signup_arr));
+            window.location.href = "login.html"
+
+        }
+    }
+</script>

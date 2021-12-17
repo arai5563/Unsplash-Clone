@@ -2,7 +2,7 @@ function navbar(){
     return ` <div>
 
     <div id="navbar_box">
-        <div> <a href="#"><img  id="logo" src="https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60"/> </a>
+        <div> <a href="home.html"><img  id="logo" src="https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60"/> </a>
         </div>
 
 
@@ -43,13 +43,13 @@ function navbar(){
 
     <div id="navbar_components">
 
-        <div><a href="#">Editorial</a></div>
+        <div ><a href="#">Editorial</a></div>
 
         <div><a href="#">Following</a></div>
 
         <div style="border: 0.1px solid black;"></div>
 
-        <div><a href="#">Holiday</a></div>
+        <div id="holiday"><a href="#">Holiday</a></div>
 
         <div><a href="#">Wallpapers</a></div>
 
@@ -61,7 +61,7 @@ function navbar(){
 
         <div><a href="#">Experimental</a></div>
 
-        <div><a href="#">Nature</a></div>
+        <div id="nature"><a href="#">Nature</a></div>
 
         <div><a href="#">Business & Work</a></div>
 
@@ -72,6 +72,10 @@ function navbar(){
         <div><a href="#">Food & Drink</a></div>
 
     </div>`
+
+    
 }
+
+
 
 export default navbar
