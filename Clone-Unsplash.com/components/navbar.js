@@ -2,7 +2,7 @@ function navbar(){
     return ` <div>
 
     <div id="navbar_box">
-        <div> <a href="home.html"><img  id="logo" src="https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60"/> </a>
+        <div> <a href="../index.html"><img  id="logo" src="https://unsplash-assets.imgix.net/marketing/press-symbol.svg?auto=format&fit=crop&q=60"/> </a>
         </div>
 
 
@@ -79,3 +79,5 @@ function navbar(){
 
 
 export default navbar
+
+
